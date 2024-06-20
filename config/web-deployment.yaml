@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web
+  labels:
+    app: web
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: web
+  template:
+    metadata:
+      labels:
+        app: web
+    spec:
+      containers:
+      - name: web
+        image: 352588443787.dkr.ecr.us-east-1.amazonaws.com/wordsmith_web:1.1
+      
+        env:
+        - name: API_URL
+          value: http://api:5000/api/words
+       
