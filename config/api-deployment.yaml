@@ -19,7 +19,7 @@ spec:
         image: 352588443787.dkr.ecr.us-east-1.amazonaws.com/wordsmith_api:1.1
     ports:
         ports:
-        - containerPort: 5000
+        - containerPort: 8080
         env:
         - name: DB_HOST
           value: db
