@@ -20,5 +20,5 @@ spec:
       
         env:
         - name: API_URL
-          value: http://api:5000/api/words
+          value: api:8080
        
