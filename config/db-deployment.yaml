@@ -17,8 +17,6 @@ spec:
       containers:
       - name: postgres
         image: 352588443787.dkr.ecr.us-east-1.amazonaws.com/wordsmith_db:1.2
-        ports:
-        - containerPort: 5432
         env:
         - name: POSTGRES_USERNAME
           valueFrom:
@@ -30,6 +28,8 @@ spec:
             secretKeyRef:
               name: db-secret
               key: password
+        ports:
+        - containerPort: 5432
         volumeMounts:
         - name: init-sql
           mountPath: /data
