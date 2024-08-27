@@ -13,24 +13,24 @@ data:
     -- Insert predefined words into the 'words' table
    
     INSERT INTO nouns(word) VALUES
-    ('cloud'),
-    ('elephant'),
-    ('gø language'),
-    ('laptøp'),
-    ('cøntainer'),
-    ('micrø-service'),
-    ('turtle'),
-    ('whale'),
-    ('gøpher'),
-    ('møby døck'),
-    ('server'),
-    ('bicycle'),
-    ('viking'),
-    ('mermaid'),
-    ('fjørd'),
-    ('legø'),
-    ('flødebolle'),
-    ('smørrebrød');
+      ('cloud'),
+      ('elephant'),
+      ('gø language'),
+      ('laptøp'),
+      ('cøntainer'),
+      ('micrø-service'),
+      ('turtle'),
+      ('whale'),
+      ('gøpher'),
+      ('møby døck'),
+      ('server'),
+      ('bicycle'),
+      ('viking'),
+      ('mermaid'),
+      ('fjørd'),
+      ('legø'),
+      ('flødebolle'),
+      ('smørrebrød');
 
     INSERT INTO verbs(word) VALUES
       ('will drink'),
