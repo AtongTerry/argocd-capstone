@@ -18,6 +18,8 @@ spec:
       - name: postgres
         image: 352588443787.dkr.ecr.us-east-1.amazonaws.com/wordsmith_db:1.2
         env:
+        - name: POSTGRES_DB
+          value: postgres
         - name: POSTGRES_USERNAME
           valueFrom:
             secretKeyRef:
