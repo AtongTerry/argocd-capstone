@@ -19,7 +19,7 @@ spec:
         image: 352588443787.dkr.ecr.us-east-1.amazonaws.com/wordsmith_api:1.1
         env:
         - name: DB_HOST
-          value: postgres
+          value: postgres-service
         - name: DB_PORT
           value: "5432"
         - name: DB_NAME
@@ -35,5 +35,5 @@ spec:
               name: db-secret
               key: password
         ports:
-        - containerPort: 5000
+        - containerPort: 8080
 
