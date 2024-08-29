@@ -20,6 +20,6 @@ spec:
       
         env:
         - name: API_URL
-          value: api-service
+          value: jdbc:postgresql://db:5432/postgres
 
        
