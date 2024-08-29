@@ -9,7 +9,7 @@ spec:
     app: db
   ports:
   - port: 5432
-    targetport: 5432
-    protocol: tcp
+    targetPort: 5432
+    protocol: TCP
     
    
