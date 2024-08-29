@@ -33,10 +33,10 @@ spec:
         ports:
         - containerPort: 5432
         volumeMounts:
-        - name: init-sql
+        - name: words
           mountPath: /docker-entrypoint-initdb.d/
       volumes:
-      - name: init-sql
+      - name: words
         configMap:
           name: db-init-sql
 
