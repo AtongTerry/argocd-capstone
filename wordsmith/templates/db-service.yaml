@@ -3,11 +3,13 @@ kind: Service
 metadata:
   name: db
   labels:
-    app: postgres 
+    app: db 
 spec:
-  type: ClusterIP
   selector:
-    app: postgres
+    app: db
   ports:
   - port: 5432
+    targetport: 5432
+    protocol: tcp
+    
    
