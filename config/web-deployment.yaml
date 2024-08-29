@@ -17,9 +17,10 @@ spec:
       containers:
       - name: web
         image: 352588443787.dkr.ecr.us-east-1.amazonaws.com/wordsmith_web:1.1
-      
+        ports:
+            - containerPort: 80
         env:
         - name: API_URL
-          value: api-service
+          value: http://api-service/words
 
        
