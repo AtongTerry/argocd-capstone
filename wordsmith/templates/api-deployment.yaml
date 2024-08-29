@@ -25,15 +25,17 @@ spec:
         # - name: DB_NAME
         #   value: postgres
         - name: DB_USERNAME
-          valueFrom:
-            secretKeyRef:
-              name: db-secret
-              key: username
+          value: "postgres"
+          # valueFrom:
+          #   secretKeyRef:
+          #     name: db-secret
+          #     key: username
         - name: DB_PASSWORD
-          valueFrom:
-            secretKeyRef:
-              name: db-secret
-              key: password
+          value: "password"
+          # valueFrom:
+          #   secretKeyRef:
+          #     name: db-secret
+          #     key: password
         ports:
         - containerPort: 8080
 
