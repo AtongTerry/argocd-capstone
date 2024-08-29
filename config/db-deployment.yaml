@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: postgres
-        image: 352588443787.dkr.ecr.us-east-1.amazonaws.com/wordsmith_db:1.2
+        image: 352588443787.dkr.ecr.us-east-1.amazonaws.com/wordsmith_db:1.3
         env:
         - name: POSTGRES_DB
           value: postgres
@@ -34,7 +34,7 @@ spec:
         - containerPort: 5432
         volumeMounts:
         - name: init-sql
-          mountPath: /data
+          mountPath: /docker-entrypoint-initdb.d/
       volumes:
       - name: init-sql
         configMap:
