@@ -19,7 +19,7 @@ spec:
         image: 352588443787.dkr.ecr.us-east-1.amazonaws.com/wordsmith_api:1.1
         env:
         - name: DB_HOST
-          value: jdbc:postgresql://db:5432/postgres
+          value: "jdbc:postgresql://db:5432/postgres"
         # - name: DB_PORT
         #   value: "5432"
         # - name: DB_NAME
