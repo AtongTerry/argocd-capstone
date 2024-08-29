@@ -19,17 +19,19 @@ spec:
         image: 352588443787.dkr.ecr.us-east-1.amazonaws.com/wordsmith_db:1.3
         env:
         - name: POSTGRES_DB
-          value: postgres
+          value: "postgres"
         - name: POSTGRES_USER
-          valueFrom:
-            secretKeyRef:
-              name: db-secret
-              key: username
+          value: "postgres"
+          # valueFrom:
+          #   secretKeyRef:
+          #     name: db-secret
+          #     key: username
         - name: POSTGRES_PASSWORD
-          valueFrom:
-            secretKeyRef:
-              name: db-secret
-              key: password
+          value: "password"
+          # valueFrom:
+          #   secretKeyRef:
+          #     name: db-secret
+          #     key: password
         ports:
         - containerPort: 5432
       #   volumeMounts:
