@@ -20,10 +20,10 @@ spec:
         env:
         - name: DB_HOST
           value: jdbc:postgresql://db:5432/postgres
-        - name: DB_PORT
-          value: "5432"
-        - name: DB_NAME
-          value: postgres
+        # - name: DB_PORT
+        #   value: "5432"
+        # - name: DB_NAME
+        #   value: postgres
         - name: DB_USERNAME
           valueFrom:
             secretKeyRef:
