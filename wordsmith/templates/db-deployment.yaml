@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: postgres
+  name: db
   labels:
-    app: postgres
+    app: db
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: postgres
+      app: db
   template:
     metadata:
       labels:
-        app: postgres
+        app: db
     spec:
       containers:
-      - name: postgres
+      - name: db
         image: 352588443787.dkr.ecr.us-east-1.amazonaws.com/wordsmith_db:1.3
         env:
         - name: POSTGRES_DB
@@ -32,11 +32,11 @@ spec:
               key: password
         ports:
         - containerPort: 5432
-        volumeMounts:
-        - name: init-sql
-          mountPath: /docker-entrypoint-initdb.d/
-      volumes:
-      - name: init-sql
-        configMap:
-          name: db-init-sql
+      #   volumeMounts:
+      #   - name: init-sql
+      #     mountPath: /docker-entrypoint-initdb.d/
+      # volumes:
+      # - name: init-sql
+      #   configMap:
+      #     name: db-init-sql
 
