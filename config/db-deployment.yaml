@@ -38,5 +38,5 @@ spec:
       volumes:
       - name: words
         configMap:
-          name: db-init-sql
+          name: words
 
