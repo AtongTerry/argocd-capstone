@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: db-init-sql
+  name: words
 data:
-  init.sql: |
+  words.sql: |
     -- Create the 'words' table if it doesn't exist
     
     CREATE TABLE nouns (word TEXT NOT NULL);
